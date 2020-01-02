@@ -3,6 +3,15 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
+import axios from 'axios'
+
+const token = localStorage.getItem('token')
+if (token) {  
+    axios.defaults.headers.common = {
+      'Authorization': 'Bearer ' + JSON.parse(token),
+      'Content-Type':'application/json'
+    };
+}
 
 ReactDOM.render(<App />, document.getElementById('root'));
 
