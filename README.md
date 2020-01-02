@@ -1,3 +1,5 @@
 ## Shopping cart
 
-Built with Django and React
+SHopping cart Built with Django and React,
+
+this is frontend , react redux
