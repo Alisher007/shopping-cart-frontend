@@ -5,8 +5,6 @@ import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
-import IconButton from '@material-ui/core/IconButton';
-import MenuIcon from '@material-ui/icons/Menu';
 import Badge from '@material-ui/core/Badge';
 import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
 import { Home, Apple } from '@material-ui/icons'
@@ -36,31 +34,14 @@ function Nav() {
     <div>
       <AppBar>
         <Toolbar>
-          <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
-            <MenuIcon />
-          </IconButton>
           <Button color="default">
             <NavLink activeClassName="active" exact to="/" className={classes.navButtonStyle}>  
                 <Typography color="inherit" variant="subtitle1">
-                    Home  <Home fontSize="small" />
+                    Products  <Home fontSize="small" />
                 </Typography>
               </NavLink>
           </Button> <br />
             
-          <Button color="default">
-            <NavLink activeClassName="active" exact to="/table" className={classes.navButtonStyle}>
-              <Typography color="inherit" variant="subtitle1">
-                  About  <Apple fontSize="small"/>
-              </Typography>
-            </NavLink>
-          </Button><br />
-          <Button color="default">
-            <NavLink activeClassName="active" exact to="/products" className={classes.navButtonStyle}>
-              <Typography color="inherit" variant="subtitle1">
-                  Products  <Apple fontSize="small"/>
-              </Typography>
-            </NavLink>
-          </Button><br />
 
           <Button color="default">
             <NavLink activeClassName="active" exact to="/login" className={classes.navButtonStyle}>

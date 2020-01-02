@@ -9,6 +9,7 @@ import Container from '@material-ui/core/Container';
 function Products() {
 
   const products = useSelector(state => state.products);
+  
   const carts = useSelector(state => state.carts);
   const dispatch = useDispatch();
 
