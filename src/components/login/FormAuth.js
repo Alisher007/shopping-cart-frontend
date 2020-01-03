@@ -51,6 +51,8 @@ const Form = (props) => {
       'password':values.password
     })
     .then(res => {      
+      console.log(res.data.access);
+      
       dispatch({
         type: "LOGIN",
         token: res.data.access
