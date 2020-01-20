@@ -7,7 +7,7 @@ import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
 import Badge from '@material-ui/core/Badge';
 import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
-import { Home, Apple } from '@material-ui/icons'
+import { Home } from '@material-ui/icons'
 import { NavLink } from 'react-router-dom'
 
 const useStyles = makeStyles(theme => ({
@@ -41,15 +41,6 @@ function Nav() {
                 </Typography>
               </NavLink>
           </Button> <br />
-            
-
-          <Button color="default">
-            <NavLink activeClassName="active" exact to="/login" className={classes.navButtonStyle}>
-              <Typography color="inherit" variant="subtitle1">
-                  Login  <Apple fontSize="small"/>
-              </Typography>
-            </NavLink>
-          </Button><br />
           
               
               <Button color="default">
@@ -60,7 +51,14 @@ function Nav() {
               </Badge>
               </Typography>
             </NavLink>
-          </Button>
+          </Button> <br />
+          <Button color="default" >
+            <a href="https://alisher-khalikulov.herokuapp.com" className={classes.navButtonStyle}>  
+                <Typography color="inherit" variant="subtitle1">
+                    Portfolio 
+                </Typography>
+              </a>
+          </Button> 
           
         </Toolbar>
       </AppBar>

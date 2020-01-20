@@ -46,7 +46,7 @@ const Form = (props) => {
   } = useForm(login, validate);
 
   function login() {
-    axios.post('http://localhost:8000/products/api/token/',{
+    axios.post('https://shoppingcart-django-redux.herokuapp.com/products/api/token/',{
       'username': values.name,
       'password':values.password
     })
@@ -58,6 +58,7 @@ const Form = (props) => {
         token: res.data.access
       })
       props.history.push('/');
+      window.location.reload(true);
     })
     .catch(err => {
         console.log(' err in fetching ', err);
@@ -76,6 +77,12 @@ const Form = (props) => {
         </Avatar>
         <Typography component="h1" variant="h5">
           Log in
+        </Typography>
+        <Typography component="h1" variant="h5">
+          username: admin
+        </Typography>
+        <Typography component="h1" variant="h5">
+          password: admin
         </Typography>
         <form className={classes.form} onSubmit={handleSubmit} noValidate>
           <Grid container spacing={2}>

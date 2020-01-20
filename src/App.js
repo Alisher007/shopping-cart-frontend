@@ -25,7 +25,7 @@ function App() {
           useNextVariants: true,
         },
         palette: {
-          type: prefersDarkMode ? 'dark' : 'light',
+          type: prefersDarkMode ? 'dark' : 'dark',
         },
       }),
     [prefersDarkMode],

@@ -100,7 +100,7 @@ export default function CartList() {
           </TableBody>
         </Table>
     </TableContainer>
-    ): (<p>No items in the Shopping Cart</p>)}
+    ): (<h3>No items in the Shopping Cart</h3>)}
         </Grid>
       </Grid>
       </div>
